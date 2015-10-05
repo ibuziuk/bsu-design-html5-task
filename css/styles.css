@@ -452,6 +452,14 @@ font-style: Tahoma;
 text-align: center;
 }
 
+#year_time {
+    padding-left: 14px;
+    padding-top: 13px;
+    position: relative;
+    width: 560px;
+    height: 286px; 
+}
+
 
 
   
