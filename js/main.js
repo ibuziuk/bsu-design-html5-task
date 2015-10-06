@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Block №2
     setImageHeader();
 
-    // Block #3
+    // Block №3
     document.getElementById("view_presentation").addEventListener("click", function() {
         if (imageTimer) {
             clearInterval(imageTimer);
@@ -72,4 +72,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             this.textContent = "Stop Presentation";
         }
     });
+
+    // Block №4
+    document.getElementById("read_more").addEventListener("click", function() {
+        document.getElementById("read_more_text").textContent = "А знаем ли мы, какие растения вокруг нас? Конечно, все узнают дуб, березу, ель, клен... А трава? Присмотритесь к ней повнимательнее, и вы увидите большое разнообразие видов. Одни зацветают рано весной и цветут до осени. Другие летом отцветают, но их побеги еще долго зеленеют. Есть растения, что зацветают лишь в разгар лета."
+    }); 
+
+    // Block №8
+    
 });
