@@ -79,6 +79,10 @@ function getTimeToNewYear() {
     return timeToNewYear;
 }
 
+function changeHeaderImage(img) {
+    document.getElementById("year_time").setAttribute("src", img.src);
+}
+
 document.addEventListener("DOMContentLoaded", function(event) { 
     // Block №2
     setImageHeader();
@@ -125,6 +129,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("clock").addEventListener("mouseout", function() {
         this.title = "";
         document.getElementById("time_left").textContent = "";
-    }); 
+    });
 
+    // Block №1
+    document.getElementById("img_preview_1").addEventListener("click", function() {
+        changeHeaderImage(this);
+    });
+
+    document.getElementById("img_preview_2").addEventListener("click", function() {
+        changeHeaderImage(this);
+    });
+
+    document.getElementById("img_preview_3").addEventListener("click", function() {
+        changeHeaderImage(this);
+    });
+
+    
 });
