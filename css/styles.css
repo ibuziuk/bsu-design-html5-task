@@ -334,17 +334,17 @@ padding-bottom: 8px; }
  font-size: 30px;
  font-weight: normal;}
  
- #content .article1 h1 span{
- color: #cfd4d5;
+#content .article1 h1 span{
+  color: #cfd4d5;
   font-family: Arial;
- font-size: 30px;
- font-weight: normal;
- }
+  font-size: 30px;
+  font-weight: normal;
+}
  
-  #content .article1 img.clock {
-	  position: absolute;
-right: 580px;
-top: 420px;
+#content .article1 img.clock {
+  position: absolute;
+  right: 580px;
+  top: 420px;
 }
 
 #content .article1 p.bold {
