@@ -170,10 +170,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
     document.getElementById("back").addEventListener("click", function() {
-        alert("back");
+        var first = document.getElementById("img_preview_1");
+        var second = document.getElementById("img_preview_2");
+        var third = document.getElementById("img_preview_3");
+
+        // change first to second & second to third
+        first.src = second.getAttribute("src"); 
+        second.src = third.getAttribute("src")
+
+        var i = images.indexOf(third.getAttribute("src"));
+        if (i >= images.length - 1) {
+            third.src = images[0];
+        } else {
+            third.src = images[++i]
+        }
+
     });
 
     document.getElementById("forward").addEventListener("click", function() {
-        alert("forward");
+        var first = document.getElementById("img_preview_1");
+        var second = document.getElementById("img_preview_2");
+        var third = document.getElementById("img_preview_3");
+
+        // change third to second & second to first
+        third.src = second.getAttribute("src"); 
+        second.src = first.getAttribute("src")
+
+        var i = images.indexOf(first.getAttribute("src"));
+        if (i) {
+            first.src = images[--i];
+        } else {
+            first.src = images[images.length - 1]
+        }
     });
 });
