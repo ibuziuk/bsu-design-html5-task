@@ -83,6 +83,27 @@ function changeHeaderImage(img) {
     document.getElementById("year_time").setAttribute("src", img.src);
 }
 
+function changeDescription(img) {
+    var text;
+    var src = img.src;
+
+    if (src.indexOf("0") > -1) {
+        text = "Лес называют зелёным океаном земли, бесценным даром природы. Лес — настоящие легкие нашей планеты: он помогает дышать всему живому, выделяя кислород, очищая воздух от грязи, пыли и вредных для здоровья людей веществ."
+    } else if (src.indexOf("1") > -1) {
+        text = "Лесные деревья и кустарники выделяют особые оздоровительные вещества — фитонциды. Легко дышится в хвойных лесах, но и горьковатый запах белых кистей цветущей черемухи, и смолистый запах лопающихся почек осины — все это фитонциды, убивающие микроорганизмы."
+    } else if (src.indexOf("2") > -1) {
+        text = "Леса кормят, обогревают, дают материал для строительства. Плоды, цветы, листья, ветки и корни — источник пищи для животных. Мощные деревья с густой кроной служат хорошей защитой от транспортных шумов, сильных ветров. Леса сберегают воду и почву. Летом смягчают жару, зимой — холод."
+    } else if (src.indexOf("3") > -1) {
+        text = "Лес издавна служит людям: из древесины изготовляют почти 20000 видов продуктов и изделий. Сочетания лесных растений образуют пейзажи неповторимой красоты."
+    } else if (src.indexOf("4") > -1) {
+        text = "Болото - это сообщество многолетних растений, которые способны произрастать в условиях обильного увлажнения проточными или стоячими водами. В болотной почве содержится мало кислорода, а нередко и питательных веществ (минеральных солей), которые необходимы растениям."
+    } else if (src.indexOf("5") > -1) {
+        text = "На лугу, в лесу, по берегам рек и озер, вдоль дороги нередко попадаются участки с повышенным содержанием воды в почве. Здесь также поселяются растения, приспособленные к жизни в условиях переувлажнения."
+    }
+
+    document.getElementById("img_description").textContent = text;
+}
+
 document.addEventListener("DOMContentLoaded", function(event) { 
     // Block №2
     setImageHeader();
@@ -134,15 +155,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Block №1
     document.getElementById("img_preview_1").addEventListener("click", function() {
         changeHeaderImage(this);
+        changeDescription(this);
     });
 
     document.getElementById("img_preview_2").addEventListener("click", function() {
         changeHeaderImage(this);
+        changeDescription(this);
     });
 
     document.getElementById("img_preview_3").addEventListener("click", function() {
         changeHeaderImage(this);
+        changeDescription(this);
     });
 
-    
+
+    document.getElementById("back").addEventListener("click", function() {
+        alert("back");
+    });
+
+    document.getElementById("forward").addEventListener("click", function() {
+        alert("forward");
+    });
 });
